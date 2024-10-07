@@ -72,7 +72,9 @@ function moyenne() {
     
     if (resultat >= 10) {
         setOutput(`le resultat de vos notes fait une moyenne de ${resultatround}/20, vous êtes admis.`);
-    } else {
+    } else if (resultat < 10) {
         setOutput(`le resultat de vos notes fait une moyenne de ${resultatround}/20, vous n'êtes pas admis.`);
+    } else {
+        setOutput("Certaines valeurs sont manquantes ou invalides", true);
     }
 }
