@@ -70,5 +70,9 @@ function moyenne() {
     let resultat = ((premierenote+secondenote+troisemenote)/3);
     let resultatround = (Math.round(resultat * 100) / 100).toFixed(2);
     
-    setOutput(`le resultat de vos notes fait une moyenne de ${resultatround}/20`);
+    if (resultat >= 10) {
+        setOutput(`le resultat de vos notes fait une moyenne de ${resultatround}/20, vous êtes admis.`);
+    } else {
+        setOutput(`le resultat de vos notes fait une moyenne de ${resultatround}/20, vous n'êtes pas admis.`);
+    }
 }
