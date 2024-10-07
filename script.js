@@ -70,10 +70,12 @@ function moyenne() {
     let resultat = ((premierenote+secondenote+troisemenote)/3);
     let resultatround = (Math.round(resultat * 100) / 100).toFixed(2);
     
-    if (resultat >= 10) {
-        setOutput(`le resultat de vos notes fait une moyenne de ${resultatround}/20, vous êtes admis.`);
+    if (resultat > 14) {
+        setOutput(`le resultat de vos notes fait une moyenne de ${resultatround}/20, vous êtes admis bien.`);
+    } else if (resultat >= 10) {
+        setOutput(`le resultat de vos notes fait une moyenne de ${resultatround}/20, vous êtes admis passable.`);
     } else if (resultat < 10) {
-        setOutput(`le resultat de vos notes fait une moyenne de ${resultatround}/20, vous n'êtes pas admis.`);
+        setOutput(`le resultat de vos notes fait une moyenne de ${resultatround}/20, vous êtes refusé.`);
     } else {
         setOutput("Certaines valeurs sont manquantes ou invalides", true);
     }
